@@ -42,11 +42,45 @@ title : Reserveer gegevens
                 </div>
                 <div class="col-12 text-center buttons">
                     <a href="reserveer.html" class="button button-primary">Vorige</a>
-                    <a href="index.html" class="button button-primary">Bestel</a>
+                    <a href="betalen.html" data-toggle="modal" data-target="#payment" class="button button-primary">Betalen</a>
                 </div>
                 
             </div>
         </form>
+    </div>
+
+    
+        
+
+
+<div id="payment" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    
+       
+        <div class="modal-content">
+            <div class="modal-body">
+                        
+                            <div class="row">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label for="exampleInputName">Naam kaarthouder:</label>
+                                    <input type="name" class="form-control" id="exampleInputName" placeholder="Naam">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label for="exampleInputName">Kaartnummer:</label>
+                                    <input type="cardnumber" class="form-control" placeholder="---- ---- ---- ---- -">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label for="exampleInputName">Vervaldatum:</label>
+                                    <input type="expiration-date" class="form-control" placeholder="--/--">
+                                </div>
+                                <div class="col-12 text-center buttons">
+                                    <a href="index.html" class="button button-primary">Betalen</a>
+                                </div>
+                            </div>
+                        
+            </div>
+        </div>
     </div>
 </body>
 </html>
