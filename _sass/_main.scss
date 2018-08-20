@@ -1,4 +1,5 @@
 @import
   "bootstrap-variables",                  // See _bootstrap-variables.scss
-  "../_vendor/bootstrap/scss/bootstrap",
+  "../_vendor/bootstrap/scss/bootstrap";
+  @import
   "custom";
