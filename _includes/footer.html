@@ -1,5 +1,40 @@
-<nav class="navbar fixed-bottom navbar-light bg-light">
-{%- if site.show-style-guide %}
-    <a href="{{ site.baseurl }}{% link style-guide/index.md %}" class="btn">Style Guide</a>
-{%- endif %}
-</nav>
+<footer class="footer" role="contentinfo">
+    <div class="footer-middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                        Citadelpark<br>
+                        9000 Gent<br>
+                        0497 03 42 35<br>
+                        contact@flowery.be</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-6 text-center">
+                    <h5>Social media</h5>
+                    <br>
+                        <a href="https://www.facebook.com/" target="_blank"><img class="socialmedia" src="assets/img/facebook.png" alt="facebook"></a>
+                        <a href="https://www.instagram.com/?hl=nl" target="_blank"><img class="socialmedia" src="assets/img/instagram.png" alt="instagram"></a>
+                        <a href="https://twitter.com/" target="_blank"><img class="socialmedia" src="assets/img/twitter.png" alt="twitter"></a>
+                </div>
+                <div class="col-md-3 col-sm-6 text-rechts">
+                    <h5>Flowery</h5>
+                    <ul class="list-unstyled">
+                        {% assign links = site.data.navigation %}
+                        {% for link in links %}
+                            {% assign class = nil %}
+                            {% if link.url contains page.url %}
+                                {% assign class = 'active' %}
+                            {% endif %}
+                                <li>
+                                    <a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a>
+                                </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
